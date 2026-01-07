@@ -163,3 +163,62 @@ This shows:
 • 	Extended partition container details
 
 <img width="782" height="746" alt="Linux Storage Management - Part 1 pic 18" src="https://github.com/user-attachments/assets/71f889e4-aa41-4a9f-bbc2-f108b9922a05" />
+
+📘 Partitioning Concepts (Summary)
+
+Primary Partitions
+
+• 	A disk can have up to 3 primary partitions.
+
+• 	One primary partition can be marked active for booting.
+
+• 	Typically used for OS installations.
+
+Extended Partition
+
+• 	Special type of primary partition.
+
+• 	Allows creation of multiple logical partitions.
+
+• 	Only one extended partition is allowed per disk.
+
+Logical Partitions
+
+• 	Created inside the extended partition.
+
+• 	Used when more than 3 partitions are needed.
+
+• 	Linux numbers logical partitions starting at sdb5.
+
+<img width="932" height="712" alt="Linux Storage Management - Part 1 pic 19" src="https://github.com/user-attachments/assets/323b2a0d-00ac-41ed-a70f-a2c2479bacb9" />
+
+
+🎯 What I Learned
+
+• 	How to safely create and manage partitions using fdisk
+
+• 	Differences between primary, extended, and logical partitions
+
+• 	Why logical partitions start at 5
+
+• 	How Linux represents extended partitions as containers
+
+• 	How to verify disk layouts using lsblk and fdisk -l
+
+• 	How storage provisioning works in real Linux/DevOps environments
+
+🌐 Why This Project Matters
+
+This project builds foundational skills used in:
+
+• 	Linux system administration
+
+• 	Cloud engineering (AWS, Azure, GCP)
+
+• 	DevOps pipelines
+
+• 	LVM, RAID, and filesystem management
+
+• 	Virtualization and infrastructure provisioning
+
+Understanding disk partitioning is essential for managing servers, configuring storage, and troubleshooting real‑world systems.
