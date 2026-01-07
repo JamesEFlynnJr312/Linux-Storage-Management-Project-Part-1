@@ -26,3 +26,22 @@ This hands‑on exercise strengthens core Linux system administration skills, in
 •   Disk: /dev/sdb (20GB virtual disk)
 
 •   Tools Used: lsblk, fdisk, fdisk -l
+
+Create and Attach the 20GB Virtual Disk
+A clean VM is used with no secondary disk attached.
+
+Steps performed:
+
+• 	Open VirtualBox → Select VM node5
+
+• 	Go to Storage
+
+• 	Click Add Hard Disk
+
+• 	Click Create
+
+• 	Set size to 20GB
+
+• 	Finish and attach the disk
+
+
