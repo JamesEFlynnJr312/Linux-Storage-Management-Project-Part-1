@@ -22,11 +22,11 @@
 
 •   OS: CentOS 9 Stream (VirtualBox VM)
 
-•   Disk: /dev/sdb (20GB virtual disk)
+•   Disk: /dev/sdb (20 GB virtual disk)
 
 •   Tools Used: lsblk, fdisk, fdisk -l
 
-## Create and Attach the 20GB Virtual Disk
+## Create and Attach the 20 GB Virtual Disk
 ## A clean VM is used with no secondary disk attached.
 
 ## Steps performed:
@@ -39,7 +39,7 @@
 
 • 	Click Create
 
-• 	Set size to 20GB
+• 	Set size to 20 GB
 
 • 	Finish and attach the disk
 
