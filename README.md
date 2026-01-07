@@ -193,7 +193,7 @@ Logical Partitions
 <img width="932" height="712" alt="Linux Storage Management - Part 1 pic 19" src="https://github.com/user-attachments/assets/323b2a0d-00ac-41ed-a70f-a2c2479bacb9" />
 
 
-**🎯 What I Learned**
+🎯 What I Learned
 
 • 	How to safely create and manage partitions using fdisk
 
@@ -207,7 +207,7 @@ Logical Partitions
 
 • 	How storage provisioning works in real Linux/DevOps environments
 
-🌐 Why This Project Matters
+🌐 Why This Project Matter 
 
 This project builds foundational skills used in:
 
