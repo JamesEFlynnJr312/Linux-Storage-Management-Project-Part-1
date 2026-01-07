@@ -1,14 +1,12 @@
 # Linux-Storage-Management-Project-Part-1
-Linux Storage Management Part 1 (Linux Disk Partitioning Project — Creating 6 Partitions on a 20 GB Disk)
+# Linux Disk Partitioning Project — Creating 6 Partitions on a 20 GB Disk
 
 <img width="1091" height="732" alt="Linux Storage Management - Part 1 pic 20" src="https://github.com/user-attachments/assets/71fcd612-3483-4069-8e3f-c85e62d70fa1" />
 
-📦 Linux Storage Management Project Part 1 — Creating 6 Partitions on a 20 GB Disk
+## 📝 Overview
+## This project demonstrates how to create six partitions on a secondary 20 GB disk (/dev/sdb) using fdisk on CentOS 9 Stream. It walks through identifying the disk, creating primary, extended, and logical partitions, and verifying the final layout using standard Linux storage tools.
 
-📝 Overview
-This project demonstrates how to create six partitions on a secondary 20 GB disk (/dev/sdb) using fdisk on CentOS 9 Stream. It walks through identifying the disk, creating primary, extended, and logical partitions, and verifying the final layout using standard Linux storage tools.
-
-This hands‑on exercise strengthens core Linux system administration skills, including:
+## This hands‑on exercise strengthens core Linux system administration skills, including:
 
 • 	Disk provisioning
 
@@ -20,7 +18,7 @@ This hands‑on exercise strengthens core Linux system administration skills, in
 
 • 	Working safely with storage devices in a VM environment
 
-🖥️ Environment:
+## 🖥️ Environment:
 
 •   OS: CentOS 9 Stream (VirtualBox VM)
 
@@ -28,10 +26,10 @@ This hands‑on exercise strengthens core Linux system administration skills, in
 
 •   Tools Used: lsblk, fdisk, fdisk -l
 
-Create and Attach the 20GB Virtual Disk
-A clean VM is used with no secondary disk attached.
+## Create and Attach the 20GB Virtual Disk
+## A clean VM is used with no secondary disk attached.
 
-Steps performed:
+## Steps performed:
 
 • 	Open VirtualBox → Select VM node5
 
@@ -61,21 +59,19 @@ Steps performed:
 
 <img width="718" height="517" alt="Linux Storage Management - Part 1 pic 8" src="https://github.com/user-attachments/assets/2635398b-f0ba-4407-8eef-2e4752fc7f78" />
 
-Verify the New Disk Using lsblk
-Before partitioning, confirm that /dev/sdb exists and is unpartitioned.
+## Verifying the new disk using lsblk before partitioning, confirm that /dev/sdb exists and is unpartitioned.
 
 <img width="653" height="487" alt="Linux Storage Management - Part 1 pic 9" src="https://github.com/user-attachments/assets/25b381b5-bd66-4622-bf88-0c0691d091d5" />
 
-Launch  fdisk on /dev/sdb
+## Launch fdisk on /dev/sdb
 
 <img width="566" height="187" alt="Linux Storage Management - Part 1 pic 10" src="https://github.com/user-attachments/assets/8039dbaf-3354-4697-9760-e7217ab7ba5f" />
 
-🧱 Partition Creation
-Create Primary Partitions (sdb1, sdb2, sdb3)
+## 🧱 Partition creation, create primary partitions (sdb1, sdb2, sdb3)
 
-Creating sdb1
+## Creating sdb1
 
-Inside fdisk:
+## Inside fdisk:
 
 • 	Type n → new partition
 
@@ -95,7 +91,7 @@ Inside fdisk:
 
 • 	Type w → write changes
 
-Repeat the same process for sdb2 and sdb3.
+## Repeat the same process for sdb2 and sdb3.
 
 <img width="637" height="708" alt="Linux Storage Management - Part 1 pic 11" src="https://github.com/user-attachments/assets/1d7379de-0615-4fe7-b8c6-12aa0f1369d2" />
 
@@ -103,9 +99,9 @@ Repeat the same process for sdb2 and sdb3.
 
 <img width="652" height="646" alt="Linux Storage Management - Part 1 pic 13" src="https://github.com/user-attachments/assets/6b54b0b1-69e4-4f85-aa69-fa12e9ae0375" />
 
-Create the Extended Partition (sdb4)
+## Create the Extended Partition (sdb4)
 
-Inside fdisk:
+## Inside fdisk:
 
 • 	Type n → new partition
 
@@ -119,18 +115,17 @@ Inside fdisk:
 
 • 	Enter 05 → Linux extended
 
-Important:
-The extended partition shows 1K in lsblk because it is a container, not a filesystem.
+## Important: The extended partition shows 1K in lsblk because it is a container, not a filesystem.
 
 <img width="810" height="723" alt="Linux Storage Management - Part 1 pic 14" src="https://github.com/user-attachments/assets/bf31d452-27e9-4029-9bdf-944ead404fc8" />
 
 <img width="697" height="340" alt="Linux Storage Management - Part 1 pic 15" src="https://github.com/user-attachments/assets/a86a39a9-ec48-4b1b-b419-d8ad2b35e0ea" />
 
-Create Logical Partitions (sdb5, sdb6)
+## Create Logical Partitions (sdb5, sdb6)
 
-Logical partitions are created inside the extended partition.
+## Logical partitions are created inside the extended partition.
 
-Inside fdisk:
+## Inside fdisk:
 
 • 	Type n → new partition
 
@@ -140,20 +135,19 @@ Inside fdisk:
 
 • 	Type w → write changes
 
-Repeat for sdb6.
+## Repeat for sdb6.
 
 <img width="567" height="617" alt="Linux Storage Management - Part 1 pic 16" src="https://github.com/user-attachments/assets/35f3e7a5-d5f4-41a2-a796-51dedc771488" />
 
-🔍 Verification
+## 🔍 Verification
 
-Verify All Partitions Using 
-
+## Verify All Partitions Using 
 
 <img width="710" height="386" alt="Linux Storage Management - Part 1 pic 17" src="https://github.com/user-attachments/assets/92e8a44f-925c-40bc-a55d-096203980a1d" />
 
-View Partition Table Using fdisk -l 
+## View Partition Table Using fdisk -l 
 
-This shows:
+## This shows:
 
 • 	True physical sizes
 
@@ -165,9 +159,9 @@ This shows:
 
 <img width="782" height="746" alt="Linux Storage Management - Part 1 pic 18" src="https://github.com/user-attachments/assets/71f889e4-aa41-4a9f-bbc2-f108b9922a05" />
 
-📘 Partitioning Concepts (Summary)
+## 📘 Partitioning Concepts (Summary)
 
-Primary Partitions
+## Primary Partitions
 
 • 	A disk can have up to 3 primary partitions.
 
@@ -175,7 +169,7 @@ Primary Partitions
 
 • 	Typically used for OS installations.
 
-Extended Partition
+## Extended Partition
 
 • 	Special type of primary partition.
 
@@ -183,7 +177,7 @@ Extended Partition
 
 • 	Only one extended partition is allowed per disk.
 
-Logical Partitions
+## Logical Partitions
 
 • 	Created inside the extended partition.
 
@@ -193,8 +187,7 @@ Logical Partitions
 
 <img width="932" height="712" alt="Linux Storage Management - Part 1 pic 19" src="https://github.com/user-attachments/assets/323b2a0d-00ac-41ed-a70f-a2c2479bacb9" />
 
-
-🎯 What I Learned
+## 🎯 What I Learned
 
 • 	How to safely create and manage partitions using fdisk
 
@@ -208,9 +201,9 @@ Logical Partitions
 
 • 	How storage provisioning works in real Linux/DevOps environments
 
-🌐 Why This Project Matter 
+## 🌐 Why This Project Matter 
 
-This project builds foundational skills used in:
+## This project builds foundational skills used in:
 
 • 	Linux system administration
 
@@ -222,4 +215,4 @@ This project builds foundational skills used in:
 
 • 	Virtualization and infrastructure provisioning
 
-Understanding disk partitioning is essential for managing servers, configuring storage, and troubleshooting real‑world systems.
+## Understanding disk partitioning is essential for managing servers, configuring storage, and troubleshooting real‑world systems.
